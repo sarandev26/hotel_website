@@ -1,0 +1,252 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "lenis/dist/lenis.css";
+
+/* SAPTARISHI ULTRA-LUXURY DESIGN SYSTEM */
+:root {
+  --obsidian: #100D0B;
+  --umber: #2A1F1A;
+  --linen: #EFE6DA;
+  --linen-muted: #B8A898;
+  --bronze: #B07A52;
+  --sunset: #D98E5F;
+  --line: #3A302A;
+
+  /* Light theme tokens */
+  --paper: #FAF7F2;
+  --paper-2: #F1EBE1;
+  --ink: #100D0B;
+  --ink-muted: #6B5F55;
+  --hairline: #E3D9CB;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+button, input, select, textarea, .content-card, .btn-primary, .btn-secondary {
+  border-radius: 0 !important; /* Strict requirement: no rounded corners on architectural elements */
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography tokens */
+.font-serif {
+  font-family: var(--font-bodoni), "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.font-sans {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-italic-serif {
+  font-family: var(--font-bodoni), "Bodoni MT", Didot, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Headings */
+.hero-heading {
+  font-family: var(--font-bodoni), serif;
+  font-size: clamp(2.8rem, 7vw, 7.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--linen);
+}
+
+.section-heading {
+  font-family: var(--font-bodoni), serif;
+  font-size: clamp(2.2rem, 4.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--linen);
+}
+
+.label-caps {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--bronze);
+}
+
+.section-number {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  color: var(--linen-muted);
+}
+
+.body-luxury {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--linen-muted);
+}
+
+/* Hairline dividers */
+.hairline {
+  height: 1px;
+  background-color: var(--line);
+  border: none;
+  width: 100%;
+}
+
+.hairline-bronze {
+  height: 1px;
+  background-color: var(--bronze);
+  border: none;
+}
+
+/* Button styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sunset);
+  color: var(--obsidian);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  padding: 16px 36px;
+  border: 1px solid var(--sunset);
+  cursor: pointer;
+  transition: background-color 0.4s var(--ease-out-expo), color 0.4s var(--ease-out-expo), border-color 0.4s var(--ease-out-expo);
+  text-decoration: none;
+  outline: none;
+}
+
+.btn-primary:hover, .btn-primary:focus-visible {
+  background-color: var(--bronze);
+  border-color: var(--bronze);
+  color: var(--linen);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--linen);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  padding: 14px 32px;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out-expo);
+  text-decoration: none;
+  outline: none;
+}
+
+.btn-secondary:hover, .btn-secondary:focus-visible {
+  border-color: var(--bronze);
+  color: var(--sunset);
+}
+
+/* Links & interactive */
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 1px solid var(--sunset);
+  outline-offset: 3px;
+}
+
+/* Content card */
+.content-card {
+  background-color: var(--umber);
+  border: 0.5px solid var(--line);
+  padding: 28px;
+  width: 320px;
+  max-width: 90vw;
+}
+
+/* Lenis scrolling */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom scrollbar (minimal luxury) */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--obsidian);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bronze);
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

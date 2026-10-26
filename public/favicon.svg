@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" fill="#100D0B" />
+  <text
+    x="50%"
+    y="54%"
+    dominant-baseline="middle"
+    text-anchor="middle"
+    font-family="'Bodoni Moda', 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, serif"
+    font-size="44"
+    font-weight="400"
+    fill="#D98E5F"
+  >S</text>
+</svg>
